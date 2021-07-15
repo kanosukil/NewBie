@@ -1,19 +1,11 @@
 # Compiled class file
 *.class
 
-# Eclipse
-.project
-.classpath
-.settings/
-
 # Intellij
 *.ipr
 *.iml
 *.iws
 .idea/
-
-# Maven
-target/
 
 # Gradle
 build
