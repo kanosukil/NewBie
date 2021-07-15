@@ -50,8 +50,8 @@ c.exe		# 忽略c.exe文件
 
 git remote -v # 查看当前远程仓库连接状态
 # 每个本地仓库都需要单独设置
-git remote add 设定名 ssh链接
+git remote add 设定名 ssh链接/https链接
 git remote rm 设定名
 
 将远程仓库爬拉下来
-git clone ssh链接
+git clone ssh链接/https链接
