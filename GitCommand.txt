@@ -1,0 +1,57 @@
+平时一定要多使用这些基础的命令!
+1)、cd  	:改变目录。
+2)、cd..	:回退到上-一个目录,直接cd进入默认目录
+3)、pwd 	:显示当前所在的目录路径。
+4)、ls(ll)	:都是列出当前目录中的所有文件,只不过ll列出的内容更为详细。
+5)、touch 	:新建一个文件如touch index.js就会在当前目录下新建一个index.js文件。
+6)、rm		:删除一 个文件, rm index.js就会把index.js文件删除。
+7)、mkdir	:新建一个目录,就是新建一个文件夹。
+8)、rm -r	:删除-一个文件夹, rm -r src删除src目录
+rm -rf /切勿在Linux中 尝试!删除电脑中全部文件!
+
+9)、mv		:移动文件, mv index.html src index.html是我们要移动的文件, src是目标文件夹,当然这样写,必须保证文件和目标文件夹在同一目录下。
+10)、reset	:重新初始化终端/清屏。
+11)、clear	:清屏。
+12)、history:查看命令历史。
+13)、help	:帮助。
+14)、exit	:退出。
+15)、#		:表示注释
+
+git配置
+查看配置文件
+git config -l
+git config --system --list #系统配置文件 位置: Git/etc/gitconfig
+git config --global --list #用户配置文件 位置: C:/user/xxx(用户名)/.gitconfig
+git config --global user.name "用户名"
+git config --global user.email "邮箱"
+
+ To 缓存区
+git add .
+git add 文件夹/
+git add 文件名
+ To 本地仓库
+git commit -m "信息"
+
+
+
+.gitignore 文件
+# 注释
+*.txt 		# 忽略所有.txt文件
+!lib.txt 	# 不忽略lib.txt
+/temp		# 忽略根目录下的temp文件
+build/		# build下的所有都忽略,但不忽略build文件
+doc/*.txt	# 忽略doc下一级的txt,但不会忽略非一级的txt
+			# e.g. doc/a.txt会被忽略 但doc/b/c.txt
+			# 和b/doc/c.txt不会被忽略
+**/foo  	# 忽略/foo a/foo b/a/foo等
+a/**/b      # 忽略a/b a/c/b a/x/y/b 等
+c.exe		# 忽略c.exe文件
+
+
+git remote -v # 查看当前远程仓库连接状态
+# 每个本地仓库都需要单独设置
+git remote add 设定名 ssh链接
+git remote rm 设定名
+
+将远程仓库爬拉下来
+git clone ssh链接
