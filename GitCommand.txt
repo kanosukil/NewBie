@@ -55,3 +55,35 @@ git remote rm 设定名
 
 将远程仓库爬拉下来
 git clone ssh链接/https链接
+
+git 分支
+git branch 				# 查看本地所有分支
+git branch -r 			# 查看所有远程分支
+git branch 分支名 		# 创建一个新分支但不切换
+
+git checkout -b 分支名	# 创建并切换
+# 使用switch更好
+git switch -c 分支名 	# 创建并切换
+git switch 分支名 		# 切换分支
+
+git checkout 分支名		# 切换分支
+git merge 分支名		# 合并指定分支到当前分支
+	# 默认快速合并(fast forward)(简单讲就是前移指针)
+	# --no--ff 关闭fast forward 使用普通模式合并
+	# 快速合并在日志上没有记录 普通合并在日志上有记录\
+(git log 等程序键盘上按q退出)
+git branch -d 分支名	# 删除分支
+git branch -D 分支名 	# 强制删除未合并的分支
+
+git分支产生冲突需要手动协商解决冲突再上传
+
+git stash # 保存现场进栈
+git stash list # 查看进栈的现场
+
+git stash apply # 恢复现场但不出栈
+git stash drop # 删除栈内现场
+
+git stash pop # 恢复并出栈
+
+git cherry-pick commit的代码 # 将该commit的动作在此分支上再进行一遍
+
