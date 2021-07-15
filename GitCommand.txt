@@ -86,4 +86,3 @@ git stash drop # 删除栈内现场
 git stash pop # 恢复并出栈
 
 git cherry-pick commit的代码 # 将该commit的动作在此分支上再进行一遍
-
