@@ -34,7 +34,7 @@ PreferredAuthentications publickey
 IdentityFile ~/.ssh/id_rsa
 Port 443
 ```
-错误代码为:
+可正常访问:
 ```
 The authenticity of host '[ssh.github.com]:443 ([18.141.90.153]:443)' can't be established.
 RSA key fingerprint is SHA256:nThbg6kXUpJWGl7E1IGOCspRomTxdCARLviKw6E5SY8.
@@ -42,11 +42,11 @@ This key is not known by any other names
 Are you sure you want to continue connecting (yes/no/[fingerprint])? 
 ```
 
-输入yes之后仍不可用,则使用命令
+但输入yes之后仍不可用,则使用命令
 ```
 ssh -vT git@github.com
 ```
-一串debug完成之后在使用命令
+debug完成之后,再次使用命令
 ```
 ssh -T git@github.com
 ```
